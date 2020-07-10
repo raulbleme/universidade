@@ -7,17 +7,28 @@ public class Aluno {
 	private String email;
 	private String fone;
 	private String dtMatricula;
+	private Endereco endereco;
 	
-	public Aluno() {
+		public Aluno() {
 		
 	}
 	
-	public Aluno(int rm, String nome, String email, String fone, String dtMatricula) {
+	public Aluno(int rm, String nome, String email, String fone, String dtMatricula, Endereco endereco) {
 		this.rm = rm;
 		this.nome = nome;
 		this.email = email;
 		this.fone = fone;
 		this.dtMatricula = dtMatricula;
+		this.endereco = endereco;
+	}
+	
+	public void setAll(int rm, String nome, String email, String fone, String dtMatricula, Endereco endereco) {
+		this.rm = rm;
+		this.nome = nome;
+		this.email = email;
+		this.fone = fone;
+		this.dtMatricula = dtMatricula;
+		this.endereco = endereco;
 	}
 	
 	public String getAll() {
@@ -25,9 +36,18 @@ public class Aluno {
 				"Nome: " + nome + "\n" +
 				"E-mail: " + email + "\n" +
 				"Telefone: " + fone + "\n" +
-				"Data de Matrícula: " + dtMatricula;
+				"Data de Matrícula: " + dtMatricula + "\n" +
+				"Endereço: " + endereco.getAll();
 	}
 	
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
 	public int getRm() {
 		return rm;
 	}

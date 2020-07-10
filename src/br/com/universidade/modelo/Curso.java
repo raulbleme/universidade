@@ -20,6 +20,14 @@ public class Curso {
 		this.mensalidade = mensalidade;
 	}
 	
+	public void setAll(String descricao, String nivel, int duracao, String periodo, float mensalidade) {
+		this.descricao = descricao;
+		this.nivel = nivel;
+		this.duracao = duracao;
+		this.periodo = periodo;
+		this.mensalidade = mensalidade;
+	}
+	
 	public String getAll() {
 		return "Descrição: " + descricao + "\n" +
 				"Nível: " + nivel + "\n" +
